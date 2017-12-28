@@ -53,7 +53,7 @@ public class ShoesList extends AppCompatActivity {
 
         //Tadi di Cut
         //Get All Data dari SQLite
-        Cursor cursor= sqLiteHelper.getData("SELECT * FROM SHOES");
+        Cursor cursor=sqLiteHelper.getData("SELECT * FROM SHOES");
         list.clear();
 
         while (cursor.moveToNext()){
@@ -74,7 +74,7 @@ public class ShoesList extends AppCompatActivity {
                 final CharSequence[] items={"Update", "Delete"};
                 AlertDialog.Builder dialog=new AlertDialog.Builder(ShoesList.this);
 
-                dialog.setTitle("Choose An Sction");
+                dialog.setTitle("Choose An Action");
                 dialog.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
@@ -169,9 +169,9 @@ public class ShoesList extends AppCompatActivity {
                     MainActivity.sqLiteHelper.deleteData(idShoes);
                     Toast.makeText(getApplicationContext(), "Hapus Sukses",Toast.LENGTH_SHORT).show();
                 }catch (Exception e){
-
+                    Log.e("Error", e.getMessage());
                 }
-
+                updateShoesList();
             }
         });
 

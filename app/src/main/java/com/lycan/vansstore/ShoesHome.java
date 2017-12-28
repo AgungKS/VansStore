@@ -28,8 +28,6 @@ public class ShoesHome extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "AGUNG ORET", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 Intent intent = new Intent(ShoesHome.this,MainActivity.class);
                 startActivity(intent);
             }
@@ -70,9 +68,11 @@ public class ShoesHome extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        /*
         if (id == R.id.action_settings) {
             return true;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     }
@@ -92,8 +92,6 @@ public class ShoesHome extends AppCompatActivity
         } else if (id == R.id.nav_add) {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
-
-        } else if (id == R.id.nav_edit) {
 
         }
 

@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         return byteArray;
     }
 
+    //Override Untuk Request Permission
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode==REQUEST_CODE_GALLERY){
